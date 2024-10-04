@@ -1,0 +1,86 @@
+/* Form */
+.loginRegister-container {
+  width: 100%;
+  color: var(--fc-tertiary);
+  font-family: var(--ff-body);
+  font-size: 14px;
+  background-color: var(--component-bg-color);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Form Inputs */
+.loginRegister-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Firstname Lastname Inputs Container */
+.loginRegister-name-input {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+}
+.loginRegister-input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.loginRegister-input-container label {
+  color: var(--fc-tertiary);
+  font-size: var(--fs-under-text);
+  margin: 5px;
+}
+.loginRegister-input-container input {
+  color: var(--fc-secondary);
+  font-family: var(--ff-body);
+  font-size: var(--fs-sm);
+  width: 100%;
+  border-radius: 0.25rem;
+  border: 1px solid #e2e2e2;
+  padding: 0.5rem 1rem;
+  outline-color: var(--bg-primary);
+}
+.loginRegister-input-container input:hover {
+  border-color: var(--bg-primary);
+}
+.loginRegister-container button {
+  border: none;
+  padding: 10px;
+  border-radius: 0.25rem;
+  color: var(--btn-color-primary);
+  font-size: var(--fs-btn);
+  font-family: var(--ff-body);
+  background-color: var(--bg-primary);
+  cursor: pointer;
+}
+.loginRegister-condition {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+}
+.loginRegister-condition .loginRegister-condition-container {
+  display: grid;
+  gap: 10px;
+}
+.loginRegister-condition .loginRegister-condition-container span {
+  font-size: var(--fs-under-text);
+  margin: 5px;
+  margin-top: -5px;
+}
+.loginRegister-condition .loginRegister-condition-checkbox {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+  margin-top: -10px;
+}
+.loginRegister-condition input {
+  margin-top: 5px;
+}
+.loginRegister p span {
+  color: var(--bg-primary);
+  font-weight: 500;
+  cursor: pointer;
+}

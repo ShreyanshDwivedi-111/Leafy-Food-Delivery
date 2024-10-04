@@ -1,0 +1,120 @@
+.footer{
+    color: var(--fc-tertiary);
+    background-color: var(--bg-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 5%;
+    padding-top: 2.5rem;
+    margin-top: 100px;
+    font-family: var(--ff-body);
+}
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    gap: 2.125rem;
+}
+.footer-content h2{
+    color: var(--fc-primary);
+    font-size: var(--fs-md);
+    line-height: var(--lh-md);
+    font-weight: 500;
+}
+.footer-content-1 .logo{
+    width: 5rem;
+}
+#footer-image-link{
+    line-height: 0;
+}
+.footer-content-1 p{
+    font-size: var(--fs-sm);
+    line-height: var(--lh-sm);
+    max-width: 90%;
+}
+.footer-content-1, .footer-content-2, .footer-content-3, .footer-content-4{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+.footer-content-1 li, .footer-content-2 li, .footer-content-3 li,.footer-content-4 li{
+    list-style: none;
+    margin-bottom: 10px;
+    font-size: var(--fs-sm);
+    line-height: var(--lh-sm);
+}
+.footer-content-2 li{
+    cursor: pointer;
+}
+.footer-social-icons img{
+    width: 1.9rem;
+    margin-right: 0.625rem; 
+    cursor: pointer;
+}
+.footer hr{
+    width: 100%;
+    height: 2px;
+    margin: 20px 0;
+    background-color: grey;
+    border: none;
+}
+.footer .footer-copyright{
+    color: var(--fc-primary);
+    font-size: var(--fs-sm);
+    line-height: var(--lh-sm);
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (min-width:640px){
+    .footer{
+        padding: 20px 10%;
+        padding-top: 3.125rem;
+    }
+    .footer-content-1 .logo{
+        width: 6rem; 
+    }
+    .footer-social-icons img{
+        width: 2rem;
+        margin-right: 0.75rem; 
+    }
+}
+@media (min-width:768px){
+    .footer{
+        padding-top: 4rem; 
+    }
+    .footer-content{
+        gap: 2.125rem; 
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+}
+@media (min-width:1024px){
+    .footer{
+        padding-top: 5rem; 
+    }
+    .footer-content{
+        gap: 4rem;  
+    }
+    .footer-content-1 .logo{
+        width: 7.1rem; 
+    }
+    .footer-social-icons img{
+        width: 2.188rem; 
+        margin-right: 0.875rem; 
+    }
+}
+@media (min-width:1280px){
+    .footer-content{
+        gap: 5rem;  
+    }
+    .footer-content-1 .logo{
+        width: 8.1rem; 
+    }
+    .footer-social-icons img{
+        width: 2.313rem;  
+        margin-right: 0.938rem; 
+    }
+}

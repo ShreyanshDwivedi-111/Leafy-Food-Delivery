@@ -1,0 +1,45 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #84b74e; 
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: none;
+    transition: background-color 0.3s ease, opacity 0.5s ease, visibility 0.5s ease; 
+    z-index: 1000; 
+}
+
+.scroll-to-top:hover {
+    background-color: #6a9b4a;
+}
+
+.scroll-icon {
+    width: 25px;
+    height: 25px;
+    color: white;
+}
+
+.fade-in {
+    opacity: 1;
+    visibility: visible;
+}
+
+.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/* Hide button on screens wider than 640px */
+@media (min-width: 640px) {
+    .scroll-to-top {
+        display: none;
+    }
+}

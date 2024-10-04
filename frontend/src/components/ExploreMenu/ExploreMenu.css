@@ -1,0 +1,129 @@
+.explore-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+  margin: 100px auto;
+}
+.explore-menu h2 {
+  color: var(--fc-secondary);
+  font-weight: 500;
+  font-family: var(--ff-heading);
+  font-size: var(--fs-2xl);
+}
+.explore-menu-text-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.explore-menu-text {
+  color: var(--fc-tertiary);
+  font-family: var(--ff-body);
+  font-size: var(--fs-md);
+  line-height: var(--lh-md);
+}
+.explore-menu-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  margin: 20px 0px;
+  overflow-x: scroll;
+}
+.explore-menu-list::-webkit-scrollbar {
+  display: none;
+}
+
+.explore-menu-list-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.explore-menu-list-item img {
+  width: 7.5vw;
+  min-width: 80px;
+  max-width: 115.2px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.explore-menu-list-item p {
+  margin-top: 10px;
+  color: var(--fc-tertiary);
+  font-family: var(--ff-body);
+  font-size: var(--fs-lg);
+  cursor: pointer;
+  width: max-content;
+}
+.explore-menu-list-item .active-img {
+  border: 5px solid #84b74e;
+  padding: 2px;
+}
+.explore-menu-list-item .active-text {
+  color: rgb(77, 77, 77);
+}
+
+.explore-menu-footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.explore-menu-footer .arrow-icon {
+  color: #464646;
+  height: 2.5rem;
+}
+.explore-menu-footer>p{
+  color: #464646;
+  font-family: var(--ff-body);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-sm);
+}
+
+.explore-menu hr {
+  margin: 10px 0px;
+  height: 2px;
+  background-color: #e2e2e2;
+  border: none;
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+  .explore-menu {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .explore-menu-text {
+    max-width: 70%;
+  }
+}
+@media (min-width: 768px) {
+  .explore-menu {
+    margin-top: 110px;
+  }
+  .explore-menu-text {
+    max-width: 60%;
+  }
+}
+@media (min-width: 1024px) {
+  .explore-menu {
+    margin-top: 120px;
+  }
+  .explore-menu-text {
+    max-width: 50%;
+  }
+  .explore-menu-footer{
+    display: none;
+  }
+}
+@media (min-width: 1280px) {
+  .explore-menu {
+    margin-top: 130px;
+  }
+}
+

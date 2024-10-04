@@ -1,0 +1,157 @@
+.order-placed{
+    position: relative;
+    padding: 20px 5%;
+    margin-top: 40px;
+    margin-bottom: -40px;
+}
+
+/* Leaf Images */
+.order-placed .order-placed-leaf2-img {
+    display: none;
+    position: absolute;
+    z-index: -10;
+    right: 0px;
+    bottom: -30px;
+    width: 7vw;
+    min-width: 4.5rem;
+    max-width: 6.25rem;
+    opacity: 0.8;
+}
+.order-placed .order-placed-leaf3-img {
+    display: none;
+    position: absolute;
+    z-index: -10;
+    left: 0px;
+    bottom: -30px;
+    width: 7vw;
+    min-width: 4.5rem;
+    max-width: 6.25rem;
+    opacity: 0.8;
+}
+
+/* --> Order-Placed-Failed <-- */
+.order-placed-failed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.order-failed-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--ff-body);
+    text-align: center;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+    background-color: var(--component-bg-color);
+    border-radius: 0.375rem;
+    border: 1px solid #c2c2c2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+/* Cross Image */
+.order-failed-container .order-failed-cross{
+    width: 4rem;
+    height: 4rem;
+}
+.order-failed-container .order-failed-cross img{
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+}
+/* Order-Failed-Text */
+.order-failed-text-1 p{
+    font-size: var(--fs-lg);
+    color: var(--fc-secondary);
+    font-weight: 500;
+}
+.order-failed-text-2 h3{
+    font-size: var(--fs-xl);
+    color: var(--fc-secondary);
+    font-weight: 600;
+}
+.order-failed-text-2 p{
+    font-size: var(--fs-md);
+    color: var(--fc-tertiary);
+    font-weight: 500;
+}
+.order-failed-text-3{
+    width: 80%;
+    text-align: center;
+}
+.order-failed-text-3 p{
+    font-size: var(--fs-md);
+    color: var(--fc-tertiary);
+    font-weight: 400;
+}
+/* Order-Failed-Buttons */
+.order-failed-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+.order-failed-buttons a{
+    font-family: var(--ff-body);
+    font-size: var(--fs-btn);
+    font-weight: 500;
+    border-radius: 0.375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.7rem 1.5rem;
+    width: 100%;
+}
+.order-failed-buttons .order-failed-button-back{
+    color: var(--btn-color-secondary);
+    background-color: white;
+    border: 1px solid var(--fc-secondary);
+}
+.order-failed-buttons .order-failed-button-retry{
+    color: var(--btn-color-primary);
+    background-color: var(--bg-primary);
+    border: 1px transparent;
+}
+
+/* Responsive */
+@media (min-width:640px){
+    .order-placed{
+        padding: 20px 10%;
+        margin-top: 60px;
+        margin-bottom: 0px;
+    }
+    .order-placed .order-placed-leaf2-img{
+        display: block;
+    }
+    .order-placed .order-placed-leaf3-img{
+        display: block;
+    }
+    .order-failed-container{
+        max-width: 50rem;
+    }
+    .order-failed-buttons{
+        flex-direction: row;
+        max-width: 90%;
+        gap: 1.5rem;
+    }
+}
+@media (min-width:845px){
+    .order-placed{
+        margin-top: 100px;
+    }
+}
+@media (min-width:1024px){
+    .order-failed-buttons{
+        gap: 2rem;
+    }
+}
+@media (min-width:1280px){
+    .order-failed-container .order-failed-cross, .order-failed-container .order-failed-cross img{
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+}

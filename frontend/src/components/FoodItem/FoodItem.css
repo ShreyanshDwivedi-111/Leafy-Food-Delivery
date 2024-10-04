@@ -1,0 +1,117 @@
+.food-item {
+  width: 100%;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  animation: fadeIn 1s;
+  border: 1px solid rgb(222, 222, 222);
+  font-family: var(--ff-body);
+  background-color: var(--component-bg-color);
+  min-width: 15.5rem; 
+}
+
+.food-item-img-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.food-item-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 15px 0px 0px;
+  object-fit: cover;
+  border: 4px solid #84b74e;
+}
+.food-item-info {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 7px;
+}
+.food-item-name-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.food-item-name-rating p {
+  font-weight: 500;
+  font-size: var(--fs-xl);
+  width: max-content;
+  color: var(--fc-primary);
+}
+.food-item-name-rating img {
+  width: 70px;
+}
+
+.food-item-description {
+  color: var(--fc-tertiary);
+  font-size: 15px;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-sm);
+}
+.food-item-add-cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 54px;
+  margin-top: 7px;
+  
+  min-width: max-content;
+}
+.food-item-price {
+  color: var(--btn-color-secondary);
+  font-size: var(--fs-lg);
+  font-weight: 500;
+  border: 1px solid;
+  padding: 4px 20px;
+  border-radius: 20px;
+}
+
+.add-item {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.buy-now-btn{
+  color: var(--btn-color-primary);
+  font-size: var(--fs-lg);
+  font-weight: 500;
+  border: 1px solid #80b14b;
+  padding: 5px 17px;
+  border-radius: 20px;
+  background-color: var(--bg-primary);
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: max-content;
+}
+/* Food-item-counter */
+.food-item-counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: white;
+}
+.food-item-counter img {
+  width: 36px;
+  cursor: pointer;
+}
+
+
+/* Responsive Design */
+@media (min-width: 450px) and (max-width: 567px) {
+  .food-item {
+    display: flex;
+  }
+  .food-item-image{
+    border-radius: 15px 0px 0px 15px;
+  }
+}

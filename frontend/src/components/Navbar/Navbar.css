@@ -1,0 +1,270 @@
+.nav-leaf1-img{
+  display: none;
+  position: absolute;
+  z-index: -1;
+  max-width: 4.188rem; 
+  min-width: 2.5rem; 
+  width: 5vw;
+  left: 0px;
+  top: 0px;
+}
+.nav-Barbeque-img{
+  position: absolute;
+  z-index: -1;
+  max-width: 10rem; 
+  min-width: 6rem; 
+  width: 10vw;
+  left: -30px;
+  top:-5px;
+}
+.nav-honey-img{
+  position: absolute;
+  z-index: -1;
+  max-width: 15rem; 
+  min-width: 8rem; 
+  width: 20vw;
+  top: 0px;
+  right: 0px;
+}
+
+.navbar {
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--ff-body);
+}
+
+/* Navbar-Left */
+.navbar-left, .navbar-left a{
+  line-height: 0px;
+}
+.navbar-left .logo {
+  width: 5rem;
+}
+
+/* Navbar-Center */
+.navbar-menu {
+  display: none;
+  font-size: var(--fs-lg);
+  line-height: var(--lh-lg);
+  color: var(--fc-primary);
+}
+
+/* Navbar-Right */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.navbar-right-item{
+  line-height: 0px;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+}
+.search-icon, .shopping-bag-icon, .user-icon {
+  width: 100%;
+  padding: 4px;
+  border-radius: 50px;
+  background: white;
+  cursor: pointer;
+  border: 1px solid black;
+}
+.search-icon:hover, .shopping-bag-icon:hover {
+  transform: scale(1.05);
+}
+.navbar-right-item .dot {
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  background-color: red;
+  border-radius: 5px;
+  top: -8px;
+  right: -8px;
+}
+.navbar button {
+  background: white;
+  font-size: var(--fs-btn);
+  font-family: var(--ff-body);
+  font-weight: 500;
+  color: var(--btn-color-secondary);
+  padding: 0.4rem 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid black;
+}
+.navbar button:hover {
+  transform: scale(1.05);
+}
+.navbar .active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #49557e;
+}
+.navbar li {
+  cursor: pointer;
+}
+
+/* User-Icon */
+.navbar-right-user-container{
+  position: relative;
+}
+.navbar-right-item .user-show-more-icon{
+  position: absolute;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50px;
+  border: 1px solid black;
+  bottom: -3px;
+  right: -3px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.navbar-right-user-container .dropdown-menu{
+  position: absolute;
+  background-color: var(--component-bg-color);
+  right: 3px;
+  top: 51px;
+  border-radius: 0.375rem;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgb(222, 222, 222);
+  z-index: 5;
+  transition: 0.3s;
+  animation: fadeInDown 0.5s;
+}
+.navbar-right-user-container .dropdown-menu ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.dropdown-menu .dropdown-item{
+  padding: 10px 0px;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 1rem;
+  font-family: var(--ff-body);
+  font-size: var(--fs-sm);
+  color: var(--fc-secondary);
+}
+.dropdown-menu .dropdown-item:hover{
+  background-color: #e8e8e8;
+}
+.dropdown-item .dropdown-item-icon{
+  width: 1.5rem;
+  color: #8e8e8e;
+  margin-left: 1rem;
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+  .nav-leaf1-img{
+    display: block;
+  }
+  .nav-Barbeque-img{
+    display: none;
+  }
+  .navbar {
+    padding: 20px 10%;
+  }
+  .navbar .logo {
+    width: 6rem;
+  }
+  .navbar-right {
+    gap: 1.2rem;
+  }
+  .navbar-right-item {
+    width: 2rem;
+    height: 2rem;
+  }
+  .search-icon, .shopping-bag-icon, .user-icon {
+    padding: 4px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar {
+    padding: 20px 10%;
+  }
+  .navbar .logo {
+    width: 6rem; 
+  }
+  .navbar-right {
+    gap: 1.25rem; 
+  }
+  .navbar-right-item {
+    width: 2.1rem; 
+    height: 2.1rem;
+  }
+  .search-icon, .shopping-bag-icon, .user-icon {
+    padding: 4px;
+  }
+}
+@media (min-width: 845px) {
+  .navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 1.25rem; 
+  }
+  .navbar button {
+    padding: 0.5rem 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .navbar-menu {
+    gap: 1.688rem; 
+  }
+  .navbar .logo {
+    width: 7.1rem; 
+  }
+  .navbar-right {
+    gap: 1.875rem; 
+  }
+  .navbar-right-item {
+    width: 2.188rem; 
+    height: 2.188rem; 
+  }
+  .search-icon, .shopping-bag-icon, .user-icon {
+    padding: 5.5px;
+  }
+}
+@media (min-width: 1280px) {
+  .navbar-menu {
+    gap: 2.188rem;
+  }
+  .navbar .logo {
+    width: 8.1rem; 
+  }
+  .navbar-right {
+    gap: 2.5rem; 
+  }
+  .navbar-right-item {
+    width: 2.313rem; 
+    height: 2.313rem; 
+  }
+  .search-icon, .shopping-bag-icon, .user-icon {
+    padding: 7px;
+  }
+}
+@media (min-width: 1536px) {
+  .navbar-menu {
+    gap: 2.313rem; 
+  }
+  .navbar .logo {
+    width: 8.2rem; 
+  }
+  .navbar-right {
+    gap: 2.813rem; 
+  }
+  .navbar-right-item {
+    width: 2.5rem; 
+    height: 2.5rem;
+  }
+  .search-icon, .shopping-bag-icon, .user-icon {
+    padding: 8px;
+  }
+}
