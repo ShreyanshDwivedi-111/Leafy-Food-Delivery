@@ -17,13 +17,7 @@ const port = process.env.PORT || 3000;
 connectDB();
 
 // Middleware:
-const corsOptions = {
-  origin: "*",
-  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
-  credentials: true,
-};
-app.options("", cors(corsOptions));
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 
 // Api Endpoints:
@@ -38,7 +32,7 @@ app.get("/api/get-pricing-details", fetchPricingDetails);
 
 // Routes
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome! to leafy." });
+  res.send("Welcome! to leafy.");
 });
 
 app.listen(port, () => {
