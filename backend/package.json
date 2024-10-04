@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "node index.js",
     "server": "nodemon server.js"
   },
   "author": "",
