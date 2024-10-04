@@ -38,7 +38,7 @@ app.get("/api/get-pricing-details", fetchPricingDetails);
 
 // Routes
 app.get("/", (req, res) => {
-  res.send("Welcome! to leafy.");
+  res.json({message:"Welcome! to leafy."});
 });
 
 app.listen(port, () => {
