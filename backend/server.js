@@ -17,8 +17,14 @@ const port = process.env.PORT || 3000;
 connectDB();
 
 // Middleware:
+const corsOptions = {
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
-app.use(cors());
 
 // Api Endpoints:
 app.use("/images", express.static("uploads"));
