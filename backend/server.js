@@ -22,7 +22,7 @@ const corsOptions = {
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
   credentials: true,
 };
-app.options("",cors(corsOptions));
+app.options("", cors(corsOptions));
 app.use(cors(corsOptions));
 app.use(express.json());
 
@@ -38,7 +38,7 @@ app.get("/api/get-pricing-details", fetchPricingDetails);
 
 // Routes
 app.get("/", (req, res) => {
-  res.json({message:"Welcome! to leafy."});
+  res.json({ message: "Welcome! to leafy." });
 });
 
 app.listen(port, () => {
