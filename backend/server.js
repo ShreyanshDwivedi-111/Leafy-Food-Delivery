@@ -25,7 +25,7 @@ app.use(express.json());
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 // Serve static files from the uploads directory
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+app.use("/images", express.static(path.join(__dirname, "uploads")));
 // app.use("/images", express.static("uploads"));
 
 // Api Endpoints:
