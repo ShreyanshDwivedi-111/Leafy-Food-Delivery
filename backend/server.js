@@ -21,14 +21,16 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
-// Using import.meta.url to get the current directory path
+// ******** Updated Code for Vercel as it was not recognizing 'uploads' as a static folder ********
+// Use import.meta.url to get the current directory path, as __dirname is not available in ES modules
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
-// Serve static files from the uploads directory
+// Serve static files (images) from the 'uploads' folder under the '/images' route
 app.use("/images", express.static(path.join(__dirname, "uploads")));
-// app.use("/images", express.static("uploads"));
+// *********************
 
 // Api Endpoints:
+// app.use("/images", express.static("uploads"));
 app.use("/api/food", foodRouter);
 app.use("/api/user", userRouter);
 app.use("/api/cart", cartRouter);
