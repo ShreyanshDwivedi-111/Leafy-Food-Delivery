@@ -16,6 +16,7 @@ const StoreContextProvider = (props) => {
   const [paymentMethod, setPaymentMethod] = useState("card"); // Default: card
   const [orders, setOrders] = useState([]); // Orders Array: []
   const [discount, setDiscount] = useState(null); // Default: null
+  const [foodListLoading, setFoodListLoading] = useState(true); // Default: true
 
   // ********** SERVICES *************
   // Fetch Princing Detials:
@@ -54,8 +55,15 @@ const StoreContextProvider = (props) => {
         };
       });
       setFoodList(newData);
+      // New code:
+      if (response.data.success) {
+        return true;
+      }
+
     } catch (error) {
       console.error(error.response?.data?.message || error.message);
+      // New code:
+      return false;
     }
   };
 
@@ -421,7 +429,13 @@ const StoreContextProvider = (props) => {
   // Effect for initial data loading:
   useEffect(() => {
     async function loadData() {
-      await fetchFoodList();
+      // New code:
+      let foodListResponse = await fetchFoodList();
+      if(foodListResponse){
+        setFoodListLoading(false);
+      }
+      
+      // await fetchFoodList();
       await fetchPricingDetails();
       const token = localStorage.getItem("token");
       if (token) {
@@ -453,6 +467,7 @@ const StoreContextProvider = (props) => {
     removeFromCart,
     getTotalCartAmount,
     pricingDetails,
+    foodListLoading,
 
     setDiscount,
     checkDiscount,

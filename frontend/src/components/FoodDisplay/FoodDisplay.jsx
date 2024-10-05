@@ -6,14 +6,14 @@ import SkeletonFoodItem from "./SkeletonFoodItem";
 import { assets } from "../../assets/assets";
 
 const FoodDisplay = ({ category }) => {
-  const { food_list } = useContext(StoreContext);
-  const [loading, setLoading] = useState(true);
+  const { food_list, foodListLoading } = useContext(StoreContext);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    if (food_list) {
-      setLoading(false);
-    }
-  }, [food_list]);
+  // useEffect(() => {
+  //   if (food_list) {
+  //     setLoading(false);
+  //   }
+  // }, [food_list]);
 
   return (
     <div className="food-display" id="food-display">
@@ -28,7 +28,7 @@ const FoodDisplay = ({ category }) => {
           experience.
         </p>
       </div>
-      {loading ? (
+      {foodListLoading ? (
         <SkeletonFoodItem count={8} />
       ) : (
         <div className="food-display-list">
