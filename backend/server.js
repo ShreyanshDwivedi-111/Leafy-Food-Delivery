@@ -1,4 +1,5 @@
 import express from "express";
+import path from "path";
 import cors from "cors";
 import { connectDB } from "./config/db.js";
 import "dotenv/config";
@@ -20,8 +21,11 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
+// Serve static files from the uploads directory
+// app.use("/images", express.static("uploads"));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
 // Api Endpoints:
-app.use("/images", express.static("uploads"));
 app.use("/api/food", foodRouter);
 app.use("/api/user", userRouter);
 app.use("/api/cart", cartRouter);
