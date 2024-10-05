@@ -21,9 +21,12 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
+// Using import.meta.url to get the current directory path
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+
 // Serve static files from the uploads directory
-// app.use("/images", express.static("uploads"));
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+// app.use("/images", express.static("uploads"));
 
 // Api Endpoints:
 app.use("/api/food", foodRouter);
