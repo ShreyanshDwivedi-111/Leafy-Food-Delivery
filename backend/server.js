@@ -17,8 +17,16 @@ const port = process.env.PORT || 3000;
 // Database Connection:
 connectDB();
 
+// CORS Configuration
+const corsConfig = {
+  origin: "*", // Replace with your frontend URL
+  // origin: process.env.FRONTEND_URL,
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"], 
+  credentials: true,
+};
+
 // Middleware:
-app.use(cors());
+app.use(cors(corsConfig));
 app.use(express.json());
 
 // ******** Updated Code for Vercel as it was not recognizing 'uploads' as a static folder ********
