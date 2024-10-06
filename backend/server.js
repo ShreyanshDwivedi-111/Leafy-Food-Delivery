@@ -19,8 +19,8 @@ connectDB();
 
 // CORS Configuration
 const corsConfig = {
-  origin: "*", // Replace with your frontend URL
-  // origin: process.env.FRONTEND_URL,
+  // origin: "*", // For all origin
+  origin: process.env.FRONTEND_URL,
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"], 
   credentials: true,
 };
