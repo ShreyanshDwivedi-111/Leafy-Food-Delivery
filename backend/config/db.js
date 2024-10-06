@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 // export const connectDB = async () => {
 //   try {
 //     await mongoose
-//       .connect(process.env.MONOGDB_CONNECTION_URL)
+//       .connect(process.env.MONGODB_URI)
 //       .then(() => {
 //         console.log("Database Connected!");
 //       });
@@ -15,7 +15,7 @@ import mongoose from "mongoose";
 
 export const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONOGDB_CONNECTION_URL);
+    await mongoose.connect(process.env.MONGODB_URI);
 
     // Log when the connection is open
     mongoose.connection.on("connected", () => {
