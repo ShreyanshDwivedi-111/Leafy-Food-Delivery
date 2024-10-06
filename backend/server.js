@@ -15,7 +15,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Database Connection:
-connectDB();
+await connectDB();
 
 // CORS Configuration
 const corsConfig = {
